@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- coonection.NameofProperty -> this is the standard naming convention 
+			and has to be followed. -->
+		<property name="connection.driver-class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate_db</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!-- This will create the table automatically if not exists already -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<mapping class="learn.sb.hibernate2.main.entities.User" />
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Looping Page</title>
+</head>
+<body>
+
+<h1>Welcome to Looping Example </h1>
+
+	<ul>
+		<li th:each="item:${model_list}" th:text="${item}"></li>
+	</ul>
+
+
+
+</body>
+</html>
